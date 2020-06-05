@@ -6,7 +6,7 @@
 #    By: ltouret <ltouret@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/20 13:00:20 by ltouret           #+#    #+#              #
-#    Updated: 2020/06/05 23:37:25 by ltouret          ###   ########.fr        #
+#    Updated: 2020/06/06 00:27:47 by ltouret          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,8 +31,6 @@ ft_lstlast.c ft_lstmap.c ft_lstnew.c ft_lstsize.c
 
 OBJS = ${SRCS:.c=.o}
 
-OBJSBONUS = ${BONUS:.c=.o}
-
 CC		= gcc
 RM		= rm -f
 
@@ -44,9 +42,6 @@ CFLAGS = -Wall -Wextra -Werror
 $(NAME): ${OBJS}
 		ar rcs ${NAME} ${OBJS}
 
-bonus:	${OBJS} ${OBJSBONUS}
-		ar rcs ${NAME} ${OBJS} ${OBJSBONUS}
-
 all:	${NAME}
 
 clean:
@@ -57,4 +52,4 @@ fclean:	clean
 
 re:		fclean all
 
-.PHONY: bonus all clean fclean re
+.PHONY: all clean fclean re
