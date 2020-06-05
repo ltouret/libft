@@ -6,7 +6,7 @@
 #    By: ltouret <ltouret@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/20 13:00:20 by ltouret           #+#    #+#              #
-#    Updated: 2020/06/05 23:20:16 by ltouret          ###   ########.fr        #
+#    Updated: 2020/06/05 23:37:25 by ltouret          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,10 +24,10 @@ gnl/get_next_line.c gnl/get_next_line_utils.c\
 printf/ft_printf.c printf/utoa.c printf/convert_func.c printf/convert_func2.c\
 printf/convert.c printf/get_param.c printf/parsing_str.c printf/apply_mod.c\
 printf/apply_pre.c printf/apply_wid.c printf/apply_wid_int.c\
-printf/free_block.c
-
-BONUS = ft_lstadd_back.c ft_lstadd_front.c ft_lstclear.c ft_lstdelone.c\
-		ft_lstiter.c ft_lstlast.c ft_lstmap.c ft_lstnew.c ft_lstsize.c
+printf/free_block.c\
+\
+ft_lstadd_back.c ft_lstadd_front.c ft_lstclear.c ft_lstdelone.c\
+ft_lstlast.c ft_lstmap.c ft_lstnew.c ft_lstsize.c
 
 OBJS = ${SRCS:.c=.o}
 
