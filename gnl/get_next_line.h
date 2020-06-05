@@ -6,7 +6,7 @@
 /*   By: ltouret <ltouret@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/17 14:24:48 by ltouret           #+#    #+#             */
-/*   Updated: 2020/01/12 17:38:38 by ltouret          ###   ########.fr       */
+/*   Updated: 2020/06/05 23:21:54 by ltouret          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <unistd.h>
 # include <stddef.h>
 
-# define BU BUFFER_SIZE
+# define BU 10 
 
 int		ft_strlen(const char *s);
 char	*ft_substr(char const *s, unsigned int start, size_t len);

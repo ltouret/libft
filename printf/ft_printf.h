@@ -6,7 +6,7 @@
 /*   By: ltouret <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/28 17:25:36 by ltouret           #+#    #+#             */
-/*   Updated: 2020/05/24 20:41:32 by ltouret          ###   ########.fr       */
+/*   Updated: 2020/06/05 23:23:07 by ltouret          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # include <unistd.h>
 # include <limits.h>
 # include <stdarg.h>
-# include "../libft/libft.h"
+# include "../libft.h"
 
 typedef struct		s_block
 {
