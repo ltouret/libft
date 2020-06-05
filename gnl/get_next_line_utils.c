@@ -6,45 +6,13 @@
 /*   By: ltouret <ltouret@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/17 14:31:08 by ltouret           #+#    #+#             */
-/*   Updated: 2020/01/12 17:38:03 by ltouret          ###   ########.fr       */
+/*   Updated: 2020/06/05 23:44:54 by ltouret          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-int		ft_strlen(const char *s)
-{
-	unsigned int	i;
-
-	i = 0;
-	if (!s)
-		return (i);
-	while (s[i])
-		i++;
-	return (i);
-}
-
-char	*ft_substr(char const *s, unsigned int start, size_t len)
-{
-	unsigned int	i;
-	char			*str;
-
-	if (!s)
-		return (NULL);
-	if ((int)start > ft_strlen(s))
-		len = 0;
-	if ((str = (char*)malloc((len + 1) * sizeof(char))))
-	{
-		i = 0;
-		while (len > i)
-			str[i++] = s[start++];
-		str[i] = '\0';
-		return (str);
-	}
-	return (0);
-}
-
-char	*ft_strjoin(char const *s1, char const *s2)
+char	*gnl_strjoin(char const *s1, char const *s2)
 {
 	char	*str;
 	int		i;

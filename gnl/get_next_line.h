@@ -6,7 +6,7 @@
 /*   By: ltouret <ltouret@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/17 14:24:48 by ltouret           #+#    #+#             */
-/*   Updated: 2020/06/05 23:21:54 by ltouret          ###   ########.fr       */
+/*   Updated: 2020/06/05 23:44:50 by ltouret          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,11 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stddef.h>
+# include "../libft.h"
 
-# define BU 10 
+# define BU 10
 
-int		ft_strlen(const char *s);
-char	*ft_substr(char const *s, unsigned int start, size_t len);
-char	*ft_strjoin(char const *s1, char const *s2);
+char	*gnl_strjoin(char const *s1, char const *s2);
 int		find_nl(char *s1);
 char	*str_until_nl(char *buff);
 char	*rest_of_str(char *after_nl);

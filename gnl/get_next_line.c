@@ -6,7 +6,7 @@
 /*   By: ltouret <ltouret@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/10 18:35:45 by ltouret           #+#    #+#             */
-/*   Updated: 2020/01/12 17:38:38 by ltouret          ###   ########.fr       */
+/*   Updated: 2020/06/05 23:44:08 by ltouret          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,7 @@ int		read_buff(char *buff, char **line, int fd, char **after_nl)
 		if (r_eof != -1)
 			buff[r_eof] = '\0';
 		nl = find_nl(buff);
-		*after_nl = ft_strjoin(*after_nl, ft_substr(buff, 0, ft_strlen(buff)));
+		*after_nl = gnl_strjoin(*after_nl, ft_substr(buff, 0, ft_strlen(buff)));
 	}
 	if (r_eof != BU && find_nl(*after_nl) == -1)
 		return (hand_return(buff, after_nl, r_eof, line));
