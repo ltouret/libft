@@ -6,7 +6,7 @@
 /*   By: ltouret <ltouret@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 10:53:44 by ltouret           #+#    #+#             */
-/*   Updated: 2019/10/25 16:16:30 by ltouret          ###   ########.fr       */
+/*   Updated: 2021/09/05 00:10:25 by ltouret          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	i = 0;
 	if (!s || !f)
 		return (NULL);
-	if ((str = (char*)malloc((ft_strlen(s) + 1) * sizeof(char))))
+	str = (char*)malloc((ft_strlen(s) + 1) * sizeof(char));
+	if (str)
 	{
 		while (s[i])
 		{

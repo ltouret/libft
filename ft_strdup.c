@@ -6,7 +6,7 @@
 /*   By: ltouret <ltouret@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/01 23:43:28 by ltouret           #+#    #+#             */
-/*   Updated: 2019/11/05 13:14:29 by ltouret          ###   ########.fr       */
+/*   Updated: 2021/09/04 23:53:35 by ltouret          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,8 @@ char	*ft_strdup(const char *s1)
 	s1_len = 0;
 	while (s1[s1_len])
 		s1_len++;
-	if (!(dest = (char *)malloc(sizeof(char) * (s1_len + 1))))
+	dest = (char *)malloc(sizeof(char) * (s1_len + 1));
+	if (!dest)
 		return (NULL);
 	i = 0;
 	while (i < s1_len)

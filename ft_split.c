@@ -6,7 +6,7 @@
 /*   By: ltouret <ltouret@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/11 10:43:30 by ltouret           #+#    #+#             */
-/*   Updated: 2020/06/22 00:24:36 by ltouret          ###   ########.fr       */
+/*   Updated: 2021/09/04 23:49:50 by ltouret          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	**if_err(char **arr)
 	return (arr);
 }
 
-int		str_count(char const *s, char c)
+int	str_count(char const *s, char c)
 {
 	int		sta;
 	int		end;

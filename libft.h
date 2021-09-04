@@ -6,7 +6,7 @@
 /*   By: ltouret <ltouret@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/20 08:03:48 by ltouret           #+#    #+#             */
-/*   Updated: 2020/10/27 23:24:08 by ltouret          ###   ########.fr       */
+/*   Updated: 2021/09/05 00:01:10 by ltouret          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,12 @@
 # include <unistd.h>
 # include <limits.h>
 
-typedef struct		s_list
+typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
 }					t_list;
+
 int					ft_printf(const char *str, ...);
 int					get_next_line(int fd, char **line);
 int					ft_atoi(const char *str);

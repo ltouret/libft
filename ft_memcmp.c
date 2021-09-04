@@ -6,13 +6,13 @@
 /*   By: ltouret <ltouret@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/21 17:03:38 by ltouret           #+#    #+#             */
-/*   Updated: 2019/11/05 13:27:14 by ltouret          ###   ########.fr       */
+/*   Updated: 2021/09/04 23:49:07 by ltouret          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_memcmp(const void *s1, const void *s2, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	unsigned char	*s1_c;
 	unsigned char	*s2_c;

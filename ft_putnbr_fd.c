@@ -6,7 +6,7 @@
 /*   By: ltouret <ltouret@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/12 18:13:42 by ltouret           #+#    #+#             */
-/*   Updated: 2019/10/28 12:53:27 by ltouret          ###   ########.fr       */
+/*   Updated: 2021/09/04 23:49:32 by ltouret          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	ft_revputstr_fd(char *s, int fd, int len)
 	}
 }
 
-int		ft_len_nbr(int nb)
+int	ft_len_nbr(int nb)
 {
 	int		i;
 

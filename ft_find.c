@@ -6,13 +6,13 @@
 /*   By: ltouret <ltouret@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/15 18:54:07 by ltouret           #+#    #+#             */
-/*   Updated: 2020/05/15 18:54:57 by ltouret          ###   ########.fr       */
+/*   Updated: 2021/09/04 23:40:12 by ltouret          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_find(char *str, int c)
+int	ft_find(char *str, int c)
 {
 	int		i;
 

@@ -6,13 +6,13 @@
 /*   By: ltouret <ltouret@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/21 11:23:38 by ltouret           #+#    #+#             */
-/*   Updated: 2019/11/05 13:27:04 by ltouret          ###   ########.fr       */
+/*   Updated: 2021/09/04 23:55:47 by ltouret          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strlen(const char *s)
+int	ft_strlen(const char *s)
 {
 	unsigned int	i;
 

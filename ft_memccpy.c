@@ -6,7 +6,7 @@
 /*   By: ltouret <ltouret@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/21 07:23:38 by ltouret           #+#    #+#             */
-/*   Updated: 2019/11/05 12:00:32 by ltouret          ###   ########.fr       */
+/*   Updated: 2021/09/04 23:48:42 by ltouret          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ void	*ft_memccpy(void *dst, void *src, int c, size_t n)
 	unsigned char	*dst_c;
 	unsigned char	*src_c;
 
-	src_c = (unsigned char*)src;
-	dst_c = (unsigned char*)dst;
+	src_c = (unsigned char *)src;
+	dst_c = (unsigned char *)dst;
 	i = 0;
 	while (i < n && src_c[i] != (unsigned char)c)
 	{

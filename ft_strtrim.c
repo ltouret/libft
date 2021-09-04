@@ -6,19 +6,22 @@
 /*   By: ltouret <ltouret@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/10 17:06:16 by ltouret           #+#    #+#             */
-/*   Updated: 2019/10/25 16:15:05 by ltouret          ###   ########.fr       */
+/*   Updated: 2021/09/05 00:09:33 by ltouret          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		find_set(char const *s1, char const *set, int opt)
+int	find_set(char const *s1, char const *set, int opt)
 {
 	int		i;
 	int		o;
 
 	i = 0;
-	o = (opt == 0) ? 0 : ft_strlen(s1) - 1;
+	if (opt == 0)
+		o = 0;
+	else
+		o = ft_strlen(s1) - 1;
 	while (set[i] && o >= 0 && s1[o])
 	{
 		if (set[i] == s1[o])
@@ -34,7 +37,7 @@ int		find_set(char const *s1, char const *set, int opt)
 	return (o);
 }
 
-int		no_neg(int i)
+int	no_neg(int i)
 {
 	if (0 > i)
 		i = 0;
@@ -53,7 +56,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	i = 0;
 	last = find_set(s1, set, 0);
 	start = find_set(s1, set, 1);
-	if ((str = (char*)malloc((no_neg(start - last) + 2) * sizeof(char))))
+	str = (char *)malloc((no_neg(start - last) + 2) * sizeof(char));
+	if (str)
 	{
 		while (start >= last)
 		{

@@ -6,7 +6,7 @@
 /*   By: ltouret <ltouret@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/10 14:44:48 by ltouret           #+#    #+#             */
-/*   Updated: 2019/10/25 16:13:38 by ltouret          ###   ########.fr       */
+/*   Updated: 2021/09/04 23:55:26 by ltouret          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	o = 0;
 	if (!s1 || !s2)
 		return (NULL);
-	if ((str = (char*)malloc((ft_strlen(s1) +
-		ft_strlen(s2) + 1) * sizeof(char))))
+	str = (char *)malloc((ft_strlen(s1) + ft_strlen(s2) + 1) * sizeof(char));
+	if (str)
 	{
 		while (s1[i])
 		{
