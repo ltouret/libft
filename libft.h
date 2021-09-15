@@ -6,7 +6,7 @@
 /*   By: ltouret <ltouret@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/20 08:03:48 by ltouret           #+#    #+#             */
-/*   Updated: 2021/09/05 00:01:10 by ltouret          ###   ########.fr       */
+/*   Updated: 2021/09/15 03:17:38 by ltouret          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,5 +75,6 @@ char				*ft_strtrim(char const *s1, char const *set);
 char				*ft_substr(char const *s, unsigned int start, size_t len);
 int					ft_tolower(int c);
 int					ft_toupper(int c);
+void				*ft_malloc(size_t size);
 
 #endif
