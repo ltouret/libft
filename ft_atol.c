@@ -6,7 +6,7 @@
 /*   By: ltouret <ltouret@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/01 19:43:28 by ltouret           #+#    #+#             */
-/*   Updated: 2021/09/04 23:37:53 by ltouret          ###   ########.fr       */
+/*   Updated: 2021/09/24 00:33:55 by ltouret          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ long	ft_atol(const char *str)
 	result *= sign;
 	return (result);
 }
+
 /*
 **#include <stdio.h>
 **

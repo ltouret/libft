@@ -6,7 +6,7 @@
 /*   By: ltouret <ltouret@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/17 14:31:08 by ltouret           #+#    #+#             */
-/*   Updated: 2020/06/05 23:44:54 by ltouret          ###   ########.fr       */
+/*   Updated: 2021/09/05 11:20:14 by ltouret          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ char	*gnl_strjoin(char const *s1, char const *s2)
 
 	if (!s1 || !s2)
 		return (NULL);
-	if ((str = (char*)malloc((ft_strlen(s1) +
-		ft_strlen(s2) + 1) * sizeof(char))))
+	str = (char *)malloc((ft_strlen(s1) + ft_strlen(s2) + 1) * sizeof(char));
+	if (str)
 	{
 		i = -1;
 		o = 0;
@@ -31,12 +31,12 @@ char	*gnl_strjoin(char const *s1, char const *s2)
 			str[i++] = s2[o++];
 		str[i] = '\0';
 	}
-	free((void*)s1);
-	free((void*)s2);
+	free((void *)s1);
+	free((void *)s2);
 	return (str);
 }
 
-int		hand_return(char *buff, char **after_nl, int r_eof, char **line)
+int	hand_return(char *buff, char **after_nl, int r_eof, char **line)
 {
 	*line = str_until_nl(*after_nl);
 	free(buff);

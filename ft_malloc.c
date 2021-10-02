@@ -6,7 +6,7 @@
 /*   By: ltouret <ltouret@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/15 03:12:23 by ltouret           #+#    #+#             */
-/*   Updated: 2021/09/15 03:17:09 by ltouret          ###   ########.fr       */
+/*   Updated: 2021/10/02 16:17:17 by ltouret          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ void	*ft_malloc(size_t size)
 	out = malloc(size);
 	if (out == NULL)
 		return (NULL);
-		//panic(ERR_MALLOC);
 	ft_bzero(out, size);
 	return (out);
 }

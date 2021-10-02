@@ -6,13 +6,13 @@
 /*   By: ltouret <ltouret@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/10 18:35:45 by ltouret           #+#    #+#             */
-/*   Updated: 2020/06/05 23:44:08 by ltouret          ###   ########.fr       */
+/*   Updated: 2021/09/05 11:18:09 by ltouret          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-int		find_nl(char *s1)
+int	find_nl(char *s1)
 {
 	int		i;
 
@@ -33,7 +33,8 @@ char	*str_until_nl(char *buff)
 	counter = 0;
 	while (buff[++i] != '\n' && buff[i])
 		counter++;
-	if ((str = (char*)(malloc(sizeof(char) * (counter + 1)))))
+	str = (char *)(malloc(sizeof(char) * (counter + 1)));
+	if (str)
 	{
 		i = -1;
 		counter = 0;
@@ -57,8 +58,8 @@ char	*rest_of_str(char *after_nl)
 		free(after_nl);
 		return (ft_substr("", 0, 0));
 	}
-	else if (!(str = (char*)(malloc(sizeof(char) *
-						(ft_strlen(after_nl) - (nl + 1) + 1)))))
+	str = (char *)(malloc(sizeof(char) * (ft_strlen(after_nl) - (nl + 1) + 1)));
+	if (!(str))
 		return (NULL);
 	o = 0;
 	while (after_nl[++nl])
@@ -68,7 +69,7 @@ char	*rest_of_str(char *after_nl)
 	return (str);
 }
 
-int		read_buff(char *buff, char **line, int fd, char **after_nl)
+int	read_buff(char *buff, char **line, int fd, char **after_nl)
 {
 	int		nl;
 	int		r_eof;
@@ -91,7 +92,7 @@ int		read_buff(char *buff, char **line, int fd, char **after_nl)
 	return (1);
 }
 
-int		get_next_line(int fd, char **line)
+int	get_next_line(int fd, char **line)
 {
 	static char	*after_nl = NULL;
 	char		*buff;
@@ -102,12 +103,13 @@ int		get_next_line(int fd, char **line)
 	w = -1;
 	if (!after_nl)
 	{
-		if (!(after_nl = malloc(sizeof(char) * 1)))
+		after_nl = malloc(sizeof(char) * 1);
+		if (!(after_nl))
 			return (-1);
 		after_nl[0] = '\0';
 	}
-	if (!(buff = malloc(sizeof(char) * (BU + 1))) || !line || BU <= 0 ||
-			fd < 0)
+	buff = malloc(sizeof(char) * (BU + 1));
+	if (!(buff) || !line || BU <= 0 || fd < 0)
 		return (-1);
 	while (++w < BU + 1)
 		buff[w] = 0;

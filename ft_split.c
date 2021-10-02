@@ -6,13 +6,13 @@
 /*   By: ltouret <ltouret@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/11 10:43:30 by ltouret           #+#    #+#             */
-/*   Updated: 2021/09/04 23:49:50 by ltouret          ###   ########.fr       */
+/*   Updated: 2021/10/02 16:20:21 by ltouret          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	**if_err(char **arr)
+static char	**if_err(char **arr)
 {
 	int		i;
 
@@ -24,7 +24,7 @@ char	**if_err(char **arr)
 	return (arr);
 }
 
-int	str_count(char const *s, char c)
+static int	str_count(char const *s, char c)
 {
 	int		sta;
 	int		end;
@@ -59,20 +59,19 @@ char	**ft_split(char const *s, char c)
 	i = -1;
 	if (!s)
 		return (NULL);
-	if ((arr = (char**)(malloc(sizeof(char*) * (str_count(s, c) + 1)))))
+	arr = ft_malloc(sizeof(char *) * (str_count(s, c) + 1));
+	while (str_count(s, c) > ++i)
 	{
-		while (str_count(s, c) > ++i)
-		{
-			while (s[o] == c && s[o])
-				o++;
-			sta = o;
-			while (s[o] != c && s[o])
-				o++;
-			if (!(arr[i] = (char*)(malloc(sizeof(*arr[i]) * ((o - sta) + 1)))))
-				return (if_err(arr));
-			ft_strlcpy(arr[i], s + sta, (o - sta) + 1);
-		}
-		arr[i] = 0;
+		while (s[o] == c && s[o])
+			o++;
+		sta = o;
+		while (s[o] != c && s[o])
+			o++;
+		arr[i] = (char *)(malloc(sizeof(*arr[i]) * ((o - sta) + 1)));
+		if (!(arr[i]))
+			return (if_err(arr));
+		ft_strlcpy(arr[i], s + sta, (o - sta) + 1);
 	}
+	arr[i] = 0;
 	return (arr);
 }
